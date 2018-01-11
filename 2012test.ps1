@@ -2309,7 +2309,7 @@ reg add "HKLM\System\CurrentControlSet\Services\LanmanWorkstation" /f /v "Depend
 
 elseif($manualmode -eq "2")
 {
-
+import-module grouppolicy
 
 [string]$PathToCompressedGPOs = Read-Host prompt("enter the file path to the GPO objects downloaded or that came whit this package.")
 [string]$DestinationToCompressedGPOs = Read-Host prompt("enter the path to place the extracted GPO objects")
